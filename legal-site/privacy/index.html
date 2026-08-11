@@ -13,7 +13,7 @@
         <div class="eyebrow">Privacy Policy</div>
         <h1>How Sahni Handles Data</h1>
         <p>
-          This policy explains what Sahni uses access to, what it stores for app functionality, and how to contact support about privacy questions.
+          This policy explains what Sahni accesses, how information is processed and stored, and the choices available to you.
         </p>
         <div class="nav">
           <a class="secondary" href="../">Legal Home</a>
@@ -24,49 +24,72 @@
 
       <section class="stack">
         <article class="card">
+          <h2>On-Device AI Processing</h2>
+          <p>
+            Sahni analyzes meal photos, nutrition-label OCR text, locally derived scanner evidence, portion information, and food descriptions entirely on your device. It uses Apple Vision, a Core ML model bundled with the app, and Apple's Foundation Models with <code>SystemLanguageModel.default</code>, which is Apple's on-device language model.
+          </p>
+          <p>
+            Sahni does not use OpenAI, Anthropic, Google Gemini, Private Cloud Compute, or any other cloud-based or third-party AI service. No meal photo, OCR text, barcode value, food description, meal history, nutrition information, HealthKit data, AI input, or AI-generated result is sent to an AI provider or to the developer. There is no third-party AI recipient and AI input and output remain on the device.
+          </p>
+        </article>
+
+        <article class="card">
           <h2>Data Sahni May Access</h2>
           <ul>
-            <li><strong>Camera and photo library:</strong> used for meal capture and photo-based food analysis when you choose those features.</li>
-            <li><strong>HealthKit:</strong> used only if you grant permission for health and activity reads inside the app.</li>
-            <li><strong>Local app storage:</strong> used to store meal history, scan results, preferences, and health-derived summaries needed for app features.</li>
-            <li><strong>App Store billing:</strong> subscriptions and purchase restoration are handled through Apple's StoreKit services.</li>
-            <li><strong>App-managed downloads:</strong> some app components such as detector model packs may be downloaded or updated by the app when that capability is enabled.</li>
+            <li><strong>Camera and photo library:</strong> used only when you choose to capture or select a meal or nutrition-label photo for on-device analysis.</li>
+            <li><strong>HealthKit:</strong> used only if you grant permission for the health and activity data types requested inside the app.</li>
+            <li><strong>Local app storage:</strong> used to store meal history, scan results, preferences, nutrition goals, and health-derived summaries needed for app features.</li>
+            <li><strong>App Store billing:</strong> subscriptions and purchase restoration are handled by Apple through StoreKit. Sahni receives transaction and entitlement status needed to unlock premium features.</li>
+            <li><strong>Apple-managed asset downloads:</strong> optional app resources such as catalog or detector model packs may be delivered through Apple's Background Assets system. User content is not uploaded as part of these downloads.</li>
           </ul>
+        </article>
+
+        <article class="card">
+          <h2>Collection and Sharing</h2>
+          <p>
+            Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
+          </p>
+          <p>
+            Apple processes App Store purchases, subscription restoration, and Apple-managed asset delivery under Apple's own privacy terms. If you voluntarily contact Sahni support by email, the developer receives your email address and the information you choose to include solely to respond to your request.
+          </p>
         </article>
 
         <article class="card">
           <h2>How Sahni Uses Data</h2>
           <ul>
-            <li>To analyze food photos and help you log meals.</li>
-            <li>To store your meal history and nutrition summaries in the app.</li>
-            <li>To read approved HealthKit signals and reflect them in progress, coaching, and related summaries.</li>
-            <li>To restore premium access and subscription state through Apple's billing system.</li>
+            <li>To analyze food photos and nutrition labels on your device and help you log meals.</li>
+            <li>To store your meal history, nutrition goals, preferences, and summaries locally in the app.</li>
+            <li>To read approved HealthKit signals and reflect them in local progress, coaching, and related summaries.</li>
+            <li>To restore premium access and subscription state through Apple's StoreKit services.</li>
           </ul>
         </article>
 
         <article class="card">
           <h2>Health Data</h2>
           <p>
-            HealthKit access is optional. Sahni only reads the health data types you authorize on your device. If you deny HealthKit access, the rest of the app remains available except for features that depend on those health reads.
+            HealthKit access is optional. Sahni only reads the health data types you authorize on your device. HealthKit data is not sent to the developer, an AI provider, advertisers, analytics services, or other third parties. If you deny or revoke HealthKit access, the rest of the app remains available except for features that depend on those health reads.
           </p>
         </article>
 
         <article class="card">
-          <h2>Retention and Control</h2>
+          <h2>Retention, Deletion, and Control</h2>
           <p>
-            Data used for local meal logging and app history is stored on your device as part of the app experience. You can remove app data by deleting the app from your device. HealthKit permissions can be changed at any time in the Health app and iOS Settings.
+            Meal history, scan results, preferences, nutrition goals, and health-derived summaries are stored on your device for as long as you keep them in the app. You can remove local app data by deleting the app. HealthKit permissions can be changed at any time in the Health app and iOS Settings.
+          </p>
+          <p>
+            Support emails may be retained only as reasonably necessary to respond, troubleshoot, and maintain the support correspondence. You may request deletion of support communications by contacting the email address below.
           </p>
         </article>
 
         <article class="card">
           <h2>Contact</h2>
           <p>
-            For privacy questions, contact <a href="mailto:saba.aziz991@gmail.com">saba.aziz991@gmail.com</a>.
+            For privacy questions or deletion requests, contact <a href="mailto:saba.aziz991@gmail.com">saba.aziz991@gmail.com</a>.
           </p>
         </article>
       </section>
 
-      <p class="footer">Last updated March 18, 2026.</p>
+      <p class="footer">Last updated August 11, 2026.</p>
     </main>
   </body>
 </html>
