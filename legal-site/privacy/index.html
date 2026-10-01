@@ -37,10 +37,11 @@
           <h2>Data Sahni May Access</h2>
           <ul>
             <li><strong>Camera and photo library:</strong> used only when you choose to capture or select a meal or nutrition-label photo for on-device analysis.</li>
-            <li><strong>HealthKit:</strong> used only if you grant permission for the health and activity data types requested inside the app.</li>
-            <li><strong>Local app storage:</strong> used to store meal history, scan results, preferences, nutrition goals, and health-derived summaries needed for app features.</li>
+            <li><strong>HealthKit:</strong> read-only, and used only if you grant permission for the health and activity data types requested inside the app. Sahni never writes to the Health app. Apple Health sync is free and optional.</li>
+            <li><strong>Local app storage:</strong> used to store meal history, scan results, saved package labels, nutrition goals and your profile answers, imported steps and weight, saved recipes and recipe preferences (including any allergies you enter), GLP-1 journal entries if you use that companion, and other preferences needed for app features.</li>
+            <li><strong>Notifications:</strong> used only if you allow them, for local reminders you set in the GLP-1 companion. Reminders are scheduled on your device; their lock-screen text does not name a medicine or dose.</li>
             <li><strong>App Store billing:</strong> subscriptions and purchase restoration are handled by Apple through StoreKit. Sahni receives transaction and entitlement status needed to unlock premium features.</li>
-            <li><strong>Apple-managed asset downloads:</strong> optional app resources such as catalog or detector model packs may be delivered through Apple's Background Assets system. User content is not uploaded as part of these downloads.</li>
+            <li><strong>Apple system model downloads:</strong> on iOS 27, the first time you refine a food's outline in a photo, iOS may download Apple's own image-segmentation model. Apple delivers this system resource; no photo or other user content is uploaded as part of the download. Sahni itself does not download catalogs, model packs, or other content.</li>
           </ul>
         </article>
 
@@ -50,7 +51,7 @@
             Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
           </p>
           <p>
-            Apple processes App Store purchases, subscription restoration, and Apple-managed asset delivery under Apple's own privacy terms. If you voluntarily contact Sahni support by email, the developer receives your email address and the information you choose to include solely to respond to your request.
+            Apple processes App Store purchases, subscription restoration, and its own system model downloads under Apple's own privacy terms. If you voluntarily contact Sahni support by email, the developer receives your email address and the information you choose to include solely to respond to your request.
           </p>
         </article>
 
@@ -67,14 +68,22 @@
         <article class="card">
           <h2>Health Data</h2>
           <p>
-            HealthKit access is optional. Sahni only reads the health data types you authorize on your device. HealthKit data is not sent to the developer, an AI provider, advertisers, analytics services, or other third parties. If you deny or revoke HealthKit access, the rest of the app remains available except for features that depend on those health reads.
+            HealthKit access is optional and free, and it is read-only: Sahni only reads the health data types you authorize on your device and never writes to the Health app. Imported values are stored in the app on your device. HealthKit data is not sent to the developer, an AI provider, advertisers, analytics services, or other third parties. If you deny or revoke HealthKit access, the rest of the app remains available except for features that depend on those health reads.
           </p>
         </article>
 
         <article class="card">
           <h2>Retention, Deletion, and Control</h2>
           <p>
-            Meal history, scan results, preferences, nutrition goals, and health-derived summaries are stored on your device for as long as you keep them in the app. You can remove local app data by deleting the app. HealthKit permissions can be changed at any time in the Health app and iOS Settings.
+            Your data is stored in protected storage on your device for as long as you keep it in the app. In Sahni, go to Settings &rsaquo; Your data to:
+          </p>
+          <ul>
+            <li><strong>Export data (CSV)</strong>: every meal with its items and nutrients, your daily steps and weight, any GLP-1 doses and check-ins, and your saved recipes and recipe preferences (including allergies), as a file you can save or share. Sahni deletes its own copy once the share sheet closes.</li>
+            <li><strong>Delete GLP-1 history</strong>: permanently deletes every GLP-1 course, including stopped ones, with all its doses and check-ins, and turns off GLP-1 reminders. Your meals, weight and other data stay.</li>
+            <li><strong>Erase all data</strong>: permanently deletes everything Sahni keeps on your device, including meals and scanned foods, saved package labels, targets and goal history, your profile, imported steps, weight and Health data, GLP-1 courses, doses and check-ins, saved recipes and recipe preferences, and the app's caches. This cannot be undone. Setup then starts again.</li>
+          </ul>
+          <p>
+            Deleting the app also removes its data from your device. Device backups made before an erase or deletion still contain your data until those backups are replaced. Your App Store subscription and the Health app's own data are not affected by either; manage them in iOS Settings and the Health app. After an erase, if Apple Health sync is on, Sahni reads your recent Health data again. HealthKit permissions can be changed at any time in the Health app and iOS Settings.
           </p>
           <p>
             Support emails may be retained only as reasonably necessary to respond, troubleshoot, and maintain the support correspondence. You may request deletion of support communications by contacting the email address below.
@@ -89,7 +98,7 @@
         </article>
       </section>
 
-      <p class="footer">Last updated August 11, 2026.</p>
+      <p class="footer">Last updated October 1, 2026.</p>
     </main>
   </body>
 </html>
