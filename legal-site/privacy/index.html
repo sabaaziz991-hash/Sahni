@@ -39,6 +39,7 @@
             <li><strong>Camera and photo library:</strong> used only when you choose to capture or select a meal or nutrition-label photo for on-device analysis.</li>
             <li><strong>HealthKit:</strong> optional and free. Sahni reads only the health and activity data types you allow, and writes to the Health app only if you turn on <em>Send nutrition to Apple Health</em> (see Health Data below).</li>
             <li><strong>Apple Watch:</strong> if you install the Sahni Apple Watch app, your iPhone sends it a summary of today over Apple's direct iPhone&ndash;Apple Watch connection (WatchConnectivity). See Apple Watch below.</li>
+            <li><strong>iCloud (Sharing, optional):</strong> only if you invite someone or accept someone's link, Sahni uses your own iCloud to share rounded ring progress. See Sharing With Family or Friends below.</li>
             <li><strong>Blood results you enter:</strong> optional lab values you type in yourself (for example cholesterol, triglycerides, fasting glucose, TSH or ferritin), with the date and, if you add it, your lab's reference range.</li>
             <li><strong>Local app storage:</strong> used to store meal history, scan results, saved package labels, nutrition goals and your profile answers, imported steps, weight and other Health values, your daylight log, any blood results you enter, saved recipes and recipe preferences (including any allergies you enter), GLP-1 journal entries if you use that companion, and other preferences needed for app features.</li>
             <li><strong>Notifications:</strong> used only if you allow them, for local reminders you set in the GLP-1 companion. Reminders are scheduled on your device; their lock-screen text does not name a medicine or dose.</li>
@@ -50,7 +51,7 @@
         <article class="card">
           <h2>Collection and Sharing</h2>
           <p>
-            Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, blood results, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
+            Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. The only data that leaves your device does so at your choice, through Apple: rounded ring progress you share with people you invite (through your own iCloud) and the summary sent to your own Apple Watch. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, blood results, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
           </p>
           <p>
             Apple processes App Store purchases, subscription restoration, and its own system model downloads under Apple's own privacy terms. If you voluntarily contact Sahni support by email, the developer receives your email address and the information you choose to include solely to respond to your request.
@@ -95,7 +96,23 @@
         <article class="card">
           <h2>Apple Watch</h2>
           <p>
-            If you install the Sahni Apple Watch app, your iPhone sends it a summary of today: calories and macronutrients against your targets, the names and calories of your recent meals, Coach's current suggestion (with Premium) and your daylight timer. This uses Apple's direct connection between your iPhone and your paired Apple Watch; nothing goes through a developer server. The watch keeps only the latest summary and sends back only your requests to log a recent meal again or to start or stop the daylight timer. Each update replaces the previous summary, and deleting the watch app removes it.
+            If you install the Sahni Apple Watch app, your iPhone sends it a summary of today: calories and macronutrients against your targets, vitamins and minerals (with Premium), the names and calories of your recent meals, Coach's current suggestion (with Premium), your daylight timer and the rings of people who share with you. This uses Apple's direct connection between your iPhone and your paired Apple Watch; nothing goes through a developer server. The watch keeps only the latest summary and sends back only your requests: to log a recent meal again, to log a food you say, or to start or stop the daylight timer. A food you say is turned into text by Apple's dictation on your watch; your iPhone then identifies it with its on-device model and logs it. Each update replaces the previous summary, and deleting the watch app removes it.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Sharing With Family or Friends</h2>
+          <p>
+            Sharing is optional and off until you invite someone. When you invite a person, Sahni creates a private space for them in your own iCloud (Apple's CloudKit) and a one-time link that you send yourself. Only the person who opens that link can see what you share with them, read-only.
+          </p>
+          <ul>
+            <li><strong>What they see:</strong> for each of the last 7 days, how far your Meals, Protein and Plants rings got, rounded down to 0, 25, 50, 75 or 100%, and, only if you choose, how many meals you logged. Never what you ate, photos, calories, weight, Apple Health data, blood results, medication or your health answers.</li>
+            <li><strong>Where it is:</strong> in your iCloud, stored as encrypted fields, and in the iCloud of the person you share with. The developer has no server and cannot read it.</li>
+            <li><strong>Control:</strong> you can hide your rings from a person (which deletes the days already shared) or stop sharing with them (which deletes their space and everything in it). Erase all data deletes every space you created. Days older than a week are deleted automatically.</li>
+            <li><strong>People who share with you:</strong> accepting their link lets you see their rings; it never shares yours. Their rings stay in your iCloud's shared area until they stop sharing.</li>
+          </ul>
+          <p>
+            iCloud is provided by Apple under Apple's own privacy terms. Sahni Sharing is not available while a clinician guides your plan in the app.
           </p>
         </article>
 
@@ -107,7 +124,7 @@
           <ul>
             <li><strong>Export data (CSV)</strong>: every meal with its items and nutrients, your daily steps and weight, your daylight log, any blood results you entered, any GLP-1 doses and check-ins, and your saved recipes and recipe preferences (including allergies), as files you can save or share. Sahni deletes its own copy once the share sheet closes.</li>
             <li><strong>Delete GLP-1 history</strong>: permanently deletes every GLP-1 course, including stopped ones, with all its doses and check-ins, and turns off GLP-1 reminders. Your meals, weight and other data stay.</li>
-            <li><strong>Erase all data</strong>: permanently deletes everything Sahni keeps on your device, including meals and scanned foods, saved package labels, targets and goal history, your profile, imported steps, weight and Health data, your daylight log, blood results, GLP-1 courses, doses and check-ins, saved recipes and recipe preferences, and the app's caches. If <em>Send nutrition to Apple Health</em> is on, the nutrition entries Sahni wrote to Apple Health are removed first. This cannot be undone. Setup then starts again.</li>
+            <li><strong>Erase all data</strong>: permanently deletes everything Sahni keeps on your device, including meals and scanned foods, saved package labels, targets and goal history, your profile, imported steps, weight and Health data, your daylight log, blood results, GLP-1 courses, doses and check-ins, saved recipes and recipe preferences, and the app's caches. If <em>Send nutrition to Apple Health</em> is on, the nutrition entries Sahni wrote to Apple Health are removed first, and every sharing space you created in iCloud is deleted. This cannot be undone. Setup then starts again.</li>
           </ul>
           <p>
             Deleting the app also removes its data from your device. Device backups made before an erase or deletion still contain your data until those backups are replaced. Your App Store subscription and the rest of the Health app's data are not affected by either; manage them in iOS Settings and the Health app. After an erase, if Apple Health sync is on, Sahni reads your recent Health data again. HealthKit permissions can be changed at any time in the Health app and iOS Settings.
