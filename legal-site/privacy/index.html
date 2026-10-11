@@ -44,18 +44,30 @@
             <li><strong>Local app storage:</strong> used to store meal history, scan results, saved package labels, nutrition goals and your profile answers, imported steps, weight and other Health values, your daylight log, any blood results you enter, saved recipes and recipe preferences (including any allergies you enter), GLP-1 journal entries if you use that companion, and other preferences needed for app features.</li>
             <li><strong>Notifications:</strong> used only if you allow them, for local reminders you set in the GLP-1 companion. Reminders are scheduled on your device; their lock-screen text does not name a medicine or dose.</li>
             <li><strong>App Store billing:</strong> subscriptions and purchase restoration are handled by Apple through StoreKit. Sahni receives transaction and entitlement status needed to unlock premium features.</li>
-            <li><strong>Apple system model downloads:</strong> on iOS 27, the first time you refine a food's outline in a photo, iOS may download Apple's own image-segmentation model. Apple delivers this system resource; no photo or other user content is uploaded as part of the download. Sahni itself does not download catalogs, model packs, or other content.</li>
+            <li><strong>Apple system model downloads:</strong> on iOS 27, the first time you refine a food's outline in a photo, iOS may download Apple's own image-segmentation model. Apple delivers this system resource; no photo or other user content is uploaded as part of the download. Optional regional barcode food data is downloaded separately when you choose it, as described below.</li>
           </ul>
         </article>
 
         <article class="card">
           <h2>Collection and Sharing</h2>
           <p>
-            Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. The only data that leaves your device does so at your choice, through Apple: rounded ring progress you share with people you invite (through your own iCloud) and the summary sent to your own Apple Watch. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, blood results, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
+            Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. At your choice, rounded ring progress is shared with people you invite through your own iCloud, and summaries, logging requests and optional experiment data are exchanged with your paired Apple Watch. Optional food-data downloads contact GitHub for public files, as described below. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, blood results, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
           </p>
           <p>
             Apple processes App Store purchases, subscription restoration, and its own system model downloads under Apple's own privacy terms. If you voluntarily contact Sahni support by email, the developer receives your email address and the information you choose to include solely to respond to your request.
           </p>
+        </article>
+
+        <article class="card">
+          <h2>Optional Barcode Food Data</h2>
+          <p>In Settings &rsaquo; Barcode food data, Sahni checks a public list hosted on GitHub. You choose which regional files to download or update; no regional database is included in the installed app. GitHub receives your IP address and requests for the list and the files you select, including their region, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy terms</a>. No barcode, photo, food history, Health data or experiment data is included in those requests.</p>
+          <p>After downloading, barcode lookup runs locally and works offline. You can remove downloaded food data in the same screen without deleting your saved products or meals. Source attribution and coverage are shown before downloading; results must be checked against the package.</p>
+        </article>
+
+        <article class="card">
+          <h2>Optional Drinking Experiment</h2>
+          <p>If you enable the experiment and start a session on your Watch, Sahni records motion for a bounded period and analyses it on the Watch to suggest possible drinking events. It stores session timing, motion-derived evidence, movement context, your drink and beverage annotations, candidate reviews, and available coverage and battery information on your paired Watch and iPhone. This is experimental and does not automatically add intake or write detections to Apple Health.</p>
+          <p>If you separately enable Apple Health context and grant permission, Sahni reads available heart-rate, heart-rate-variability, step and active-energy samples around the session for exploratory comparison. The detector works without this optional context. These records are not sent to GitHub, the developer or any outside service. You can review and delete experiment records in the app; deleting experiment-owned Health copies does not delete the original Health records.</p>
         </article>
 
         <article class="card">
@@ -96,7 +108,7 @@
         <article class="card">
           <h2>Apple Watch</h2>
           <p>
-            If you install the Sahni Apple Watch app, your iPhone sends it a summary of today: calories and macronutrients against your targets, vitamins and minerals (with Premium), the names and calories of your recent meals, Coach's current suggestion (with Premium), your daylight timer and the rings of people who share with you. This uses Apple's direct connection between your iPhone and your paired Apple Watch; nothing goes through a developer server. The watch keeps only the latest summary and sends back only your requests: to log a recent meal again, to log a food you say, or to start or stop the daylight timer. A food you say is turned into text by Apple's dictation on your watch; your iPhone then identifies it with its on-device model and logs it. Each update replaces the previous summary, and deleting the watch app removes it.
+            If you install the Sahni Apple Watch app, your iPhone sends it a summary of today: calories and macronutrients against your targets, vitamins and minerals (with Premium), the names and calories of your recent meals, Coach's current suggestion (with Premium), your daylight timer and the rings of people who share with you. This uses Apple's direct connection between your iPhone and your paired Apple Watch; nothing goes through a developer server. The watch keeps the latest summary and sends back your requests to log a recent meal again, log a food you say, log water or undo that water entry, or start or stop the daylight timer. Optional drinking experiment records are stored separately as described below. A food you say is turned into text by Apple's dictation on your watch; your iPhone then identifies it with its on-device model and logs it. Each update replaces the previous summary, and deleting the watch app removes it.
           </p>
         </article>
 
@@ -142,7 +154,7 @@
         </article>
       </section>
 
-      <p class="footer">Last updated October 5, 2026.</p>
+      <p class="footer">Last updated October 11, 2026.</p>
     </main>
   </body>
 </html>
