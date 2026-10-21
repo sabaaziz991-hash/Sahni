@@ -51,7 +51,7 @@
         <article class="card">
           <h2>Collection and Sharing</h2>
           <p>
-            Sahni does not operate an account system, advertising service, analytics service, or developer backend for user content. At your choice, rounded ring progress is shared with people you invite through your own iCloud, and summaries, logging requests and optional experiment data are exchanged with your paired Apple Watch. Optional food-data downloads contact GitHub for public files, as described below. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, blood results, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
+            The Sahni app does not operate an account system, advertising service, analytics service, or developer backend for user content. (The separate, optional Sahni plugin for ChatGPT and Claude answers requests made inside those chats without keeping them; see Sahni in ChatGPT and Claude below.) At your choice, rounded ring progress is shared with people you invite through your own iCloud, and summaries, logging requests and optional experiment data are exchanged with your paired Apple Watch. Optional food-data downloads contact GitHub for public files, as described below. The developer does not collect or receive your meal photos, OCR text, food descriptions, meal history, nutrition information, HealthKit data, blood results, or AI inputs and outputs. Sahni does not sell user data or share it with third-party AI providers, advertisers, data brokers, or analytics companies.
           </p>
           <p>
             Apple processes App Store purchases, subscription restoration, and its own system model downloads under Apple's own privacy terms. If you voluntarily contact Sahni support by email, the developer receives your email address and the information you choose to include solely to respond to your request.
@@ -128,6 +128,23 @@
           </p>
         </article>
 
+        <article class="card" id="chat-apps">
+          <h2>Sahni in ChatGPT and Claude</h2>
+          <p>
+            Separately from the app, Sahni offers an optional plugin for ChatGPT and Claude that calculates daily nutrition targets, weighs household portions and lists the sources behind them. It works only inside those chat services, when the chat calls it for you. The Sahni app never sends anything to it, and the plugin never reads anything from the app.
+          </p>
+          <ul>
+            <li><strong>What it receives:</strong> the details the chat passes to answer your request: age, sex, height, weight, activity, goal and any health context you mention (such as pregnancy, breastfeeding, diabetes, kidney disease or an eating-disorder history), the portions you ask about, or the words you search the sources for. It does not receive your name, contact details, chat history, photos or anything stored in the Sahni app.</li>
+            <li><strong>How it is used:</strong> only to calculate the answer to that request. Never for advertising, profiling or training any AI model.</li>
+            <li><strong>Retention:</strong> none. The plugin keeps no copy of what it receives and writes no logs of it. The developer does not see what you send; the developer sees only overall service statistics, such as how many requests were made.</li>
+            <li><strong>Recipients:</strong> Cloudflare runs the plugin's server and handles each request, including your IP address and the address requested, to deliver it, under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>. Your conversation, including what you tell the chat, is handled by OpenAI or Anthropic under their own privacy policies.</li>
+            <li><strong>Your choices:</strong> the plugin needs no account. Health context is optional, though leaving it out means the targets can't take it into account. You can remove the plugin at any time in ChatGPT or Claude.</li>
+          </ul>
+          <p>
+            The plugin's answers are general nutrition targets, not medical advice, and it does not calculate targets for anyone under 15.
+          </p>
+        </article>
+
         <article class="card">
           <h2>Retention, Deletion, and Control</h2>
           <p>
@@ -154,7 +171,7 @@
         </article>
       </section>
 
-      <p class="footer">Last updated October 11, 2026.</p>
+      <p class="footer">Last updated October 21, 2026.</p>
     </main>
   </body>
 </html>
